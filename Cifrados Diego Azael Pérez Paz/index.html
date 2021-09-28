@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"></link>
+    <title>Cifrados</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Cifrados Cesar y Viggenere</h1>
+    </header>
+   
+    <div class="container">
+                    <div class="gatico">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </div>
+                    <div class="opciones">
+                        <h2>Bienvenido, en esta página se puede cifrar con dos algoritmos</h2>
+                        
+                        <blockquote>
+                            <p>Elige que cifrado quiere usar: </p>
+                        
+                        </blockquote>
+
+                    </div>
+                    <br>
+                    <br>
+                    
+                    
+                    <button class="btn third"><a href="#cesar">Cesar</a></button>
+                    <button class="btn second"><a href="#Vigenere">Viggenere</a></button>
+                                     
+    </div>
+    <br>
+    <div class="cesar">
+        <a id="cesar"></a>
+        <h1>Cifrado Cesar</h1>
+        <h3>Ingresa el texto que desea encriptar</h3>
+                <textarea id="cadena" placeholder="Texto a cifrar"></textarea>
+                <p> <input type="button" value="Cifrar" onclick="cifrar()">
+                    
+                    <input type="button" value="Descifrar" onclick="descifrar()">
+                </p>
+                <br>
+                
+                <div id="resultado"></div>
+                <br>
+                    <h4>Copie y pegue el mensaje encriptado y ahora de clic en "descifrar" para ver el mensaje </h4>
+                    <br>
+                <script src="js/cesar.js"></script>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="vigge">
+        <a id="Vigenere"></a>
+        <h1>Cifrado Vigenere</h2>
+            <h3>Ingresa el texto que desea encriptar</h3>
+            <textarea id="cad" placeholder="Texto a cifrar" onkeypress="return letras(event)"></textarea>
+            <br>
+            <input type="password" id="clv" placeholder="Ingrese una key (una clave)"  onkeypress="return letras(event)">
+            <br>
+            <input type="button" value="Cifrar" onclick="encriptarTextoClaro()">
+
+            <input type="button" value="Descifrar" onclick="desencriptarTextoClaro()">
+            <br>
+            <div id="resultado2"></div>
+            <h4>Copie y pegue el mensaje encriptado y ahora de clic en "descifrar" para ver el mensaje, no cambie la Key que ingresó </h4>
+            <script src="js/viggenere.js"></script>
+    </div>
+    
+    
+    <footer class="main-footer">
+        <div class="container">
+            <h2 class="footer__title">Hecho por Pérez Paz Diego Azael</h2>
+        </div>
+          <div class="column column--50-25">
+            
+          </div>
+          
+    </footer>
+    
+</body>
+</html>

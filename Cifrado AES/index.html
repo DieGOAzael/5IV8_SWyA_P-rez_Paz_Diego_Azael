@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+       
+            
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cifrado AES</title>
+    </head>
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="index.html"><li>Cifrado simple AES</li></a>
+            <a href="descifrado.html"><li>Cifrado AES a elegir</li></a>
+          </ul>
+        </div>
+      </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" ></script>
+    <script src="js/Archivoguardar.js" ></script>
+
+
+    <div align="center">
+        <div class="menu">
+            <div class="sub-menu">
+            <h2>Cifrado AES</h2>
+            <h6>Pérez Paz Diego Azael</h6>
+            <input class="btn btn-link" type="file" id="file-input" />
+            <h6 align="left">Texto</h6>
+            <h6>Contenido del archivo:</h6>
+            <textarea id="contenido-archivo" rows="2" cols="45"></textarea>
+            <h6 align="left">Clave</h6>
+            <input type="text" id="demo1" class="form-control">
+            <h6 align="left">Cifrado</h6>
+            <textarea id="saldjp" rows="2" cols="45" readonly="readonly" ></textarea>
+            <textarea id="caso" rows="2" cols="45"readonly="readonly"></textarea><hr>
+            <span id="demo32"></span><Br><span id="demo321"></span>
+            <input class="btn btn-outline-danger" type="button" value="Cifrar" onclick="validar()">
+            <input class="btn btn-outline-warning" type="button" value="Decifrar" onclick="dfv()">       
+            <button id="s"class="btn btn-outline-success" >Descargar</button>
+            </div>
+            </div>
+
+                
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $("#s").click(function() { 
+        var cth = document.getElementById("saldjp").value;
+        var blob = new Blob([cth], {type: "text/plain;charset=utf-8"});
+        if(cth ==""){
+            alert("Primero cifra");
+        }else{
+            saveAs(blob, "cifrado.txt");
+        }
+        
+        });
+    </script>
+    <script src="js/cifrado.js" ></script>
+    
+
+        
+          
+</body>
+</html>

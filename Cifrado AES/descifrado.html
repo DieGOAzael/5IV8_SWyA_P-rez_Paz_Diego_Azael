@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta http-equiv="Expires" content="0">
+     <meta http-equiv="Last-Modified" content="0">
+     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+     <meta http-equiv="Pragma" content="no-cache">
+            
+        <link rel="stylesheet" href="css/style2.css">
+        <title>Cifrado AES a elegir</title>
+    </head>
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="index.html"><li>Cifrado simple AES</li></a>
+            <a href="descifrado.html"><li>Cifrado AES a elegir</li></a>
+          </ul>
+        </div>
+      </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" ></script>
+    <script src="js/Archivoguardar.js" ></script>
+
+
+    <div align="center">
+        <div class="menu">
+            <div class="sub-menu">
+                <form id="formulario">
+                    
+                    <h2>Cifrado AES con tres opciones</h2>
+                    <div class="form-group">
+                  <h6>Texto a cifrar:</h6>
+                      <textarea class="form-control" id="cadena" rows="3" placeholder="Ingrese su mensaje"></textarea>
+                    </div>
+                    <fieldset class="form-group">
+                      <legend class="mt-4">Elija el tipo de cifrado AES en específico</legend>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="option" id="option1" value="option1" checked="">
+                          128 bits
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="option" id="option2" value="option2">
+                          192 bits
+                        </label>
+                      </div>
+                      <div class="form-check disabled">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="option" id="option3" value="option3">
+                          256 bits
+                        </label>
+                      </div>
+                    </fieldset>
+                    <div class="form-group">
+                      <h6>Ingrese la Llave (de igual manera no se tiene que olvidar)</h6>
+                      <input type="text" class="form-control" id="password" placeholder="Ingrese su clave" size="32" >
+                    </div>
+                    <br>
+                    <div class="alert alert-dismissible alert-secondary">
+                      <button type="submit" class="btn btn-dark" id="cifrar" data-bs-dismiss="alert">Cifrar mensaje</button>
+                    </div>
+                    <br>
+                    <h6>Su mensaje cifrado es el siguiente: </h6>
+                    <div class="form-group">
+                      <textarea class="form-control" id="cifrado" rows="3" readonly></textarea>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-6">
+                        <h6>Asigne el nombre del archivo como "cifrado" de otro forma no funcionará el descifrado</h6>
+                          <br>
+                          <textarea class="form-control" id="nombretxt" rows="1" placeholder="Ingrese |cifrado|"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <br><br>
+                    <div class="col-12">
+                      <div class="d-grid gap-2">
+                        <div class="alert alert-dismissible alert-secondary">
+                          <button class="btn btn-dark" id="descargar" data-bs-dismiss="alert">Descargar archivo cifrado</button>
+                        </div>
+                    <br>
+                    <div class="col-12">
+                      <div class="d-grid gap-2">
+                        <div class="alert alert-dismissible alert-danger">
+                          <button type="reset" class="btn btn-dark" data-bs-dismiss="alert"> Eliminar datos</button>
+                        </div>
+                      </div>
+                    </div>
+          
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/cifrado2.js"></script>
+    
+    
+</body>
+</html>
